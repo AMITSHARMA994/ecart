@@ -1,0 +1,56 @@
+{% extend 'index.html' %}
+{% block title %}
+<title>ECart - profile</title>
+{% endblock %}
+{% block body %}
+<div class="container-fluid my-3">
+    <div class="row">
+        <div class="col-md-6">
+            {% if data.pic %}
+            <img src="/static/noimage.png" height="100px" width="100%" alt="">
+            {% else %}
+            <img src="/static/img/noimg.png" height="500px" width="100%" alt="">
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            <h5 class="bg-primary text-center p-2">Buyer Profile</h5>
+            <div class="table-responssive">
+                <table class="table">
+                    <tr>
+                        <th>Name</th>
+                        <td>{{item.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>username</th>
+                        <td>{{item.username}}</td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td>{{item.phone}}</td>
+                    </tr>
+                    <tr>
+                        <th>Adderss1</th>
+                        <td>{{item.Adderss2}}</td>
+                    </tr>
+                    <tr>
+                        <th>Address3</th>
+                        <td>{{item.Address3}}</td>
+                    </tr>
+                    <tr>
+                        <th>Pin</th>
+                        <td>{{item.Pin}}</td>
+                    </tr>
+                    <tr>
+                        <th>City</th>
+                        <td>{{item.City}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a href="/update-profile/" class="btn btn bg-primary w-100">update-profile</a>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

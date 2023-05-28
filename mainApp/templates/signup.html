@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}
+<title>ECart - signup</title>
+{% endblock %}
+{% block body %}
+
+<div clas="container-fluid w-100">
+    <div class="w-75 m-auto">
+        <h5 class="text-center bg-primary"><span class="text-success">Create</span></h5>
+        <form action="/login/" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <lable>username</lable>
+            <input type="text" name="username" placeholder="username": class="form-control">
+        </div>
+        <div class="mb-3">
+            <lable>Password</lable>
+            <input type="password" name="password" placeholder="password": class="form-control">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary w-100"> submit</button>
+        </div>
+    </form>
+    </div>
